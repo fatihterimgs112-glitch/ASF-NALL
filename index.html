@@ -614,7 +614,7 @@
 
       <div class="contact-form">
         <h3>Ücretsiz Keşif Talep Et</h3>
-        <div id="contactForm">
+        <form id="contactForm" action="https://formsubmit.co/asfconstructioniletisim@gmail.com" method="POST">
           <div class="form-row">
             <div class="form-group"><label>Adınız *</label><input type="text" id="fname" placeholder="Ahmet" required /></div>
             <div class="form-group"><label>Soyadınız *</label><input type="text" id="lname" placeholder="Yılmaz" required /></div>
@@ -644,8 +644,8 @@
             <label>Projeniz Hakkında</label>
             <textarea id="message" placeholder="Mekânınız ve beklentileriniz hakkında kısaca bilgi verin..."></textarea>
           </div>
-          <button class="form-submit" onclick="submitForm()">Randevu Talep Et 🏗️</button>
-        </div>
+          <button type="submit" class="form-submit">Randevu Talep Et 🏗️</button>
+        </form>
         <div class="form-success" id="formSuccess">
           <div class="success-icon">✅</div>
           <h4>Talebiniz Alındı!</h4>
@@ -775,7 +775,7 @@
     setTimeout(() => t.classList.remove('show'), 3500);
   }
 
-  function submitForm() {
+function submitForm() {
     const fname = document.getElementById('fname').value.trim();
     const phone = document.getElementById('phone').value.trim();
     const service = document.getElementById('service').value;
@@ -785,7 +785,7 @@
     document.getElementById('contactForm').style.display = 'none';
     document.getElementById('formSuccess').style.display = 'block';
     showToast('✅ Talebiniz gönderildi!');
-  }
+}
 
   // ─── Smooth anchor close mobile on click ───
   document.querySelectorAll('a[href^="#"]').forEach(a => {
