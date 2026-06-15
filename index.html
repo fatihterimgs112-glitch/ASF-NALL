@@ -615,17 +615,20 @@
       <div class="contact-form">
         <h3>Ücretsiz Keşif Talep Et</h3>
         <form id="contactForm" action="https://formsubmit.co/asfconstructioniletisim@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="ASF Construction Yeni Talep">
+<input type="hidden" name="_captcha" value="false">
+          
           <div class="form-row">
-            <div class="form-group"><label>Adınız *</label><input type="text" id="fname" placeholder="Ahmet" required /></div>
-            <div class="form-group"><label>Soyadınız *</label><input type="text" id="lname" placeholder="Yılmaz" required /></div>
+            <div class="form-group"><label>Adınız *</label><input type="text" id="fname" name="Ad" placeholder="Ahmet" required />
+            <div class="form-group"><label>Soyadınız *</label><input type="text" id="lname" name="Soyad" placeholder="Yılmaz" required />
           </div>
           <div class="form-row">
-            <div class="form-group"><label>Telefon *</label><input type="tel" id="phone" placeholder="+90 5XX XXX XX XX" required /></div>
-            <div class="form-group"><label>E-posta</label><input type="email" id="email" placeholder="ahmet@email.com" /></div>
+            <div class="form-group"><label>Telefon *</label><input type="tel" id="phone" name="Telefon" placeholder="+90 5XX XXX XX XX" required />
+            <div class="form-group"><label>E-posta</label><input type="email" id="email" name="Eposta" placeholder="ahmet@email.com" />
           </div>
           <div class="form-group">
             <label>Hizmet Türü *</label>
-            <select id="service">
+            <select id="service" name="Hizmet">
               <option value="">Seçiniz...</option>
               <option>Konut & Daire Tadilat</option>
               <option>Villa & Müstakil Ev</option>
@@ -638,11 +641,11 @@
           </div>
           <div class="form-group">
             <label>İlçe / Semt</label>
-            <input type="text" id="district" placeholder="Kadıköy, Beşiktaş..." />
+            <input type="text" id="district" name="Ilce" placeholder="Kadıköy, Beşiktaş..." />
           </div>
           <div class="form-group">
             <label>Projeniz Hakkında</label>
-            <textarea id="message" placeholder="Mekânınız ve beklentileriniz hakkında kısaca bilgi verin..."></textarea>
+            <textarea id="message" name="ProjeDetayi" placeholder="Mekânınız ve beklentileriniz hakkında kısaca bilgi verin..."></textarea>
           </div>
           <button type="submit" class="form-submit">Randevu Talep Et 🏗️</button>
         </form>
