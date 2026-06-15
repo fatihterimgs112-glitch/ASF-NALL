@@ -247,8 +247,27 @@
     .footer-bottom span { color: var(--gold); }
 
     /* ─── WHATSAPP FLOAT ─── */
-    .whatsapp-float { position: fixed; bottom: 28px; right: 28px; z-index: 200; width: 56px; height: 56px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; box-shadow: 0 4px 20px rgba(37,211,102,.4); transition: transform var(--transition); }
-    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float {
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 200;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 14px 22px;
+background: #25D366;
+color: #fff;
+font-weight: 700;
+font-size: 14px;
+text-decoration: none;
+border-radius: 50px;
+box-shadow: 0 4px 20px rgba(37,211,102,.4);
+transition: all .3s ease;
+}
+    .whatsapp-float:hover {
+transform: translateY(-3px);
+}
 
     /* ─── SCROLL TO TOP ─── */
     .scroll-top { position: fixed; bottom: 28px; left: 28px; z-index: 200; width: 44px; height: 44px; border-radius: 8px; background: var(--gold); color: var(--dark); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; opacity: 0; pointer-events: none; transition: opacity var(--transition), transform var(--transition); }
@@ -728,7 +747,9 @@
 </footer>
 
 <!-- WhatsApp Float -->
-<a href="https://wa.me/905366623868" class="whatsapp-float" target="_blank" aria-label="WhatsApp">💬</a>
+<a href="https://wa.me/905366623868" class="whatsapp-float" target="_blank">
+📱 TEKLİF AL
+</a>
 
 <!-- Scroll Top -->
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Yukarı çık">↑</button>
