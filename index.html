@@ -651,6 +651,12 @@
             <label>Projeniz Hakkında</label>
             <textarea id="message" name="ProjeDetayi" placeholder="Mekânınız ve beklentileriniz hakkında kısaca bilgi verin..."></textarea>
           </div>
+<button
+type="button"
+onclick="generateProjectText()"
+style="margin-bottom:10px;padding:10px 15px;background:#ff9800;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+✨ Yapay Zeka ile Metin Oluştur
+</button>
           <button type="submit" class="form-submit">Randevu Talep Et 🏗️</button>
         </form>
         <div class="form-success" id="formSuccess">
@@ -804,6 +810,47 @@ function submitForm() {
       }
     });
   });
+  function generateProjectText() {
+
+    const service = document.getElementById("service").value;
+    const district = document.getElementById("district").value;
+    const messageBox = document.getElementById("message");
+
+    let text = "";
+
+    switch(service) {
+
+        case "Konut & Daire Tadilatı":
+            text = `${district} bölgesindeki konutum için kapsamlı tadilat hizmeti almak istiyorum. Keşif yapılması ve fiyat teklifi paylaşılması konusunda bilgi rica ederim.`;
+            break;
+
+        case "Villa & Müstakil Ev":
+            text = `${district} bölgesindeki villa veya müstakil evim için renovasyon planlıyorum. İç ve dış mekan yenileme çalışmaları hakkında teklif almak istiyorum.`;
+            break;
+
+        case "Mutfak Yenileme":
+            text = `${district} bölgesindeki mutfağımı modern ve kullanışlı hale getirmek istiyorum. Dolap, tezgâh ve seramik yenilemesi için teklif talep ediyorum.`;
+            break;
+
+        case "Banyo & WC Renovasyon":
+            text = `${district} bölgesindeki banyo ve WC alanlarımın yenilenmesi için keşif ve fiyat teklifi almak istiyorum.`;
+            break;
+
+        case "Ofis & Ticari Alan":
+            text = `${district} bölgesindeki ticari alanım için profesyonel tadilat ve dekorasyon hizmeti almak istiyorum.`;
+            break;
+
+        case "Cafe & Restoran Tasarımı":
+            text = `${district} bölgesindeki işletmem için profesyonel tasarım ve yenileme hizmeti almak istiyorum.`;
+            break;
+
+        default:
+            text = `${district} bölgesindeki projem için keşif ve fiyat teklifi almak istiyorum.`;
+    }
+
+   messageBox.value = text;
+}
+}
 </script>
 </body>
 </html>
